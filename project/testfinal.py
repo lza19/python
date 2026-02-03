@@ -493,37 +493,41 @@ def sizes():
 running = True
 
 while running:
-    print("--- CS monitor hub---")
-    print("Welcome to the CS monitor hub!")
-    print("---- Brand ----")
-    print("1 : Samsung")
-    print("2 : Dell")
-    print("3 : LG")
-    print("4 : ASUS")
-    print("Q : Quit")       
-    n1 = input("เลือก แบรนด์สินค้า (1-4): ") #str
-    n1 = n1.upper()
 
-    if n1 == "1":
-        brand = "Samsung"
+    while True:
+        print("--- CS monitor hub---")
+        print("Welcome to the CS monitor hub!")
+        print("---- Brand ----")
+        print("1 : Samsung")
+        print("2 : Dell")
+        print("3 : LG")
+        print("4 : ASUS")
+        print("Q : Quit")       
+        n1 = input("เลือก แบรนด์สินค้า (1-4): ") #str
+        n1 = n1.upper()
+
+        if n1 == "1":
+            brand = "Samsung"
+            break
+        elif n1 == "2":
+            brand = "Dell"
+            break
+        elif n1 == "3":
+            brand = "LG"
+            break
+        elif n1 == "4":
+            brand = "ASUS"
+            break
+        elif n1 == "Q":
+            print("Exiting Goodbye!")
+            running = False
+            break
+        else:
+            print("\n\n\n")
+            print("ใส่ค่าผิด กรุณาใส่ใหม่")
         
-    elif n1 == "2":
-        brand = "Dell"
-        
-    elif n1 == "3":
-        brand = "LG"
-        
-    elif n1 == "4":
-        brand = "ASUS"
-        
-    elif n1 == "Q":
-        print("Exiting Goodbye!")
-        break
-    else:
-        print("\n\n\n")
-        print("ใส่ค่าผิด กรุณาใส่ใหม่")
     print("\n\n\n")
-
+    n2 = ""
     if n1 == "1" or n1 == "2" or n1 == "3" or n1 == "4":
         while True:
             print(f"สินค้าที่เลือก : {brand}")
